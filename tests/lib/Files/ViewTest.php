@@ -1533,14 +1533,14 @@ class ViewTest extends \Test\TestCase {
 				->setMethods([])
 				->getMock();
 
-			$mounts[] = $this->getMock(
+			$mounts[] = $this->createMock(
 				'\Test\TestMoveableMountPoint',
 				['moveMount'],
 				[$storage, $mountPoint]
 			);
 		}
 
-		$mountProvider = $this->getMock('\OCP\Files\Config\IMountProvider');
+		$mountProvider = $this->createMock('\OCP\Files\Config\IMountProvider');
 		$mountProvider->expects($this->any())
 			->method('getMountsForUser')
 			->will($this->returnValue($mounts));

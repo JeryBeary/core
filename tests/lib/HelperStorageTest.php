@@ -62,7 +62,7 @@ class HelperStorageTest extends \Test\TestCase {
 	 * @return \OC\Files\Storage\Storage
 	 */
 	private function getStorageMock($freeSpace = 12) {
-		$this->storageMock = $this->getMock(
+		$this->storageMock = $this->createMock(
 			'\OC\Files\Storage\Temporary',
 			array('free_space'),
 			array('')

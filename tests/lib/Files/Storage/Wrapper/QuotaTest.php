@@ -75,7 +75,7 @@ class QuotaTest extends \Test\Files\Storage\Storage {
 	}
 
 	public function testFreeSpaceWithUnknownDiskSpace() {
-		$storage = $this->getMock(
+		$storage = $this->createMock(
 			'\OC\Files\Storage\Local',
 			array('free_space'),
 			array(array('datadir' => $this->tmpDir))
@@ -132,7 +132,7 @@ class QuotaTest extends \Test\Files\Storage\Storage {
 	}
 
 	public function testReturnFalseWhenFopenFailed() {
-		$failStorage = $this->getMock(
+		$failStorage = $this->createMock(
 			'\OC\Files\Storage\Local',
 			array('fopen'),
 			array(array('datadir' => $this->tmpDir)));

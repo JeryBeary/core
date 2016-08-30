@@ -41,7 +41,7 @@ class VersionCheckTest extends \Test\TestCase {
 			->disableOriginalConstructor()
 			->getMock();
 
-		$this->updater = $this->getMock('\OC\Updater\VersionCheck',
+		$this->updater = $this->createMock('\OC\Updater\VersionCheck',
 			['getUrlContent'], [$clientService, $this->config]);
 	}
 
